@@ -4,14 +4,11 @@
 
 app.SecondComponent = Component({
     selector:'second',
-    template:'<p><em>{{quote.line}}</em>{{quote.author}}</p>'
+    template:'<p><em>{{quote.line}}</em><b><br />{{quote.author}}</b></p>'
 })
 .Class({
     constructor: [QuoteService, function SecondComponent (quoteService){
-       var self = this;
-       quoteService.generateRandomQuotes(2000,function(quote){
-           self.quote = quote;
-       });
+       quoteService.generateRandomQuotes(2000,quote => this.quote = quote);
     }]
 });
 

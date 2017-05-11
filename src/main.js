@@ -4,4 +4,4 @@
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 
-})(window.app || (window.app = {}));
+})(window.app || (window.app = {})); 
